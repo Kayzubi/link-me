@@ -1,0 +1,55 @@
+.profile {
+  text-align: center;
+  position: relative;
+}
+
+.profile-img {
+  position: relative;
+  overflow: hidden;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin: auto;
+  cursor: pointer;
+}
+
+.camera {
+  position: absolute;
+  bottom: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.profile-img:before {
+  content: '';
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(52, 64, 84, 0.75),
+    rgba(52, 64, 84, 0.75)
+  );
+  transition: opacity 0.2s;
+}
+
+.profile-img:hover .camera {
+  bottom: 1rem;
+  opacity: 1;
+}
+.profile-img:hover.profile-img:before {
+  opacity: 1;
+}
+
+#profile_img {
+  width: 100%;
+}
