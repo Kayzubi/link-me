@@ -1,0 +1,63 @@
+.error {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.error-heading {
+  margin: 1rem 0;
+  font-size: 5rem;
+}
+
+.error-type {
+  color: #5925dc;
+  font-weight: 500;
+}
+
+.error-message {
+  margin-bottom: 2rem;
+  color: #475467;
+}
+
+.error-btn {
+  padding: 1.5rem;
+  margin-right: 3rem;
+  display: inline-block;
+  text-align: center;
+  border-radius: 0.5rem;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.error-btn > * {
+  vertical-align: middle;
+}
+
+.error-btn-outline {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.error-btn-primary {
+  background-color: #5925dc;
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.error-btn:hover {
+  transform: translateY(-4px);
+}
+
+.error-btn:active {
+  transform: translateY(-2px);
+}
+
+@media only screen and (max-width: 600px) {
+  .error-btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}

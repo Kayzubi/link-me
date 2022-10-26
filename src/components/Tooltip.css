@@ -1,6 +1,6 @@
 .tooltip-box {
   position: absolute;
-  right: 125px;
+  right: 2rem;
   cursor: pointer;
 }
 [tooltip] {
