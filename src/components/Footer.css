@@ -8,7 +8,7 @@
   color: #667085;
 }
 
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 768px) {
   .footer .container {
     flex-direction: column;
     gap: 3rem;

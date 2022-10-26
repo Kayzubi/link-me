@@ -20,17 +20,17 @@ function LinkList() {
     {
       id: 'book_python',
       title: 'Python Books',
-      url: 'https://books.zuri.team/',
+      url: 'https://books.zuri.team/python-for-beginners?ref_id=Kayzubi',
     },
     {
       id: 'pitch',
       title: 'Background Check for Coders',
-      url: 'https://books.zuri.team/',
+      url: 'https://background.zuri.team',
     },
     {
       id: 'book_design',
       title: 'Design Books',
-      url: 'https://books.zuri.team/',
+      url: 'https://books.zuri.team/design-rules',
     },
   ]
   return (

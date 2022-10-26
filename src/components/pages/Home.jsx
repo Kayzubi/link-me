@@ -1,5 +1,7 @@
 import Profile from '../Profile'
 import LinkList from '../LinkList'
+import { ReactComponent as Slack } from '../assets/slack.svg'
+import { ReactComponent as Github } from '../assets/github.svg'
 
 function Home() {
   return (
@@ -7,7 +9,17 @@ function Home() {
       <div className='container'>
         <Profile />
         <LinkList />
-        <div className='social'></div>
+        <div
+          className='social'
+          style={{
+            display: 'flex',
+            gap: '2rem',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <Slack />
+          <Github />
+        </div>
       </div>
     </div>
   )
