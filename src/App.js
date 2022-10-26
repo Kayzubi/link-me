@@ -8,14 +8,10 @@ function App() {
   return (
     <BrowserRouter>
       <div className='App'>
-        <header className='App-header'>
-          <h1>Hello Word</h1>
-        </header>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
-
         <Footer />
       </div>
     </BrowserRouter>

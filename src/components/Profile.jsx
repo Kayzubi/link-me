@@ -7,12 +7,16 @@ import './Profile.css'
 function Profile() {
   return (
     <div className='profile'>
-      <Tooltip tooltip={<Share />} tooltipText={'Share'} direction={'left'} />
+      <Tooltip
+        tooltip={<Share />}
+        tooltipText={'Share link'}
+        direction={'left'}
+      />
       <div className='profile-img'>
         <img src={Image} alt='Profile-img' id='profile_img' />
         <AiOutlineCamera color='#ffffff' className='camera' />
       </div>
-      <h1 id='twitter'>Softowerribwoy</h1>
+      <h2 id='twitter'>Softowerribwoy</h2>
       <p
         id='slack'
         style={{

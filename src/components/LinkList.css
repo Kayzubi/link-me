@@ -1,0 +1,23 @@
+.links {
+  margin-top: 5rem;
+}
+
+.btn-link {
+  display: block;
+  font-weight: 600;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 0.8rem;
+  background-color: #eaecf0;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.btn-link:hover {
+  background-color: #d0d5dd;
+  transform: translateY(-4px);
+}
+
+.btn-link:active {
+  transform: translateY(-2px);
+}
