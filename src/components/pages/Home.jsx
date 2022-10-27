@@ -17,8 +17,12 @@ function Home() {
             justifyContent: 'center',
             alignItems: 'center',
           }}>
-          <Slack />
-          <Github />
+          <a href='https://slack.com/'>
+            <Slack />
+          </a>
+          <a href='https://github.com/Kayzubi?'>
+            <Github />
+          </a>
         </div>
       </div>
     </div>
