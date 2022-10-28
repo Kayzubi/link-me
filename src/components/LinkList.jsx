@@ -3,12 +3,12 @@ import './LinkList.css'
 function LinkList() {
   const links = [
     {
-      id: 'btn_twitter',
+      id: 'btn__twitter',
       title: 'Twitter Link',
       url: 'https://twitter.com/Softowerribwoy',
     },
     {
-      id: 'btn_zuri',
+      id: 'btn__zuri',
       title: 'Zuri Team',
       url: 'https://training.zuri.team/',
     },
@@ -18,7 +18,7 @@ function LinkList() {
       url: 'https://books.zuri.team/',
     },
     {
-      id: 'book_python',
+      id: 'book__python',
       title: 'Python Books',
       url: 'https://books.zuri.team/python-for-beginners?ref_id=Kayzubi',
     },
@@ -28,7 +28,7 @@ function LinkList() {
       url: 'https://background.zuri.team',
     },
     {
-      id: 'book_design',
+      id: 'book__design',
       title: 'Design Books',
       url: 'https://books.zuri.team/design-rules',
     },

@@ -18,14 +18,14 @@ function Profile() {
         direction={'left'}
       />
       <div className='profile-img-container'>
-        <img src={Image} alt='Profile-img' id='profile_img' />
+        <img src={Image} alt='Profile-img' id='profile__img' />
         <AiOutlineCamera color='#ffffff' className='camera' />
       </div>
       <h2 id='twitter'>Softowerribwoy</h2>
       <p
         id='slack'
         style={{
-          display: 'none',
+          visibility: 'hidden',
         }}>
         Kayzubi
       </p>
