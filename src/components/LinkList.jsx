@@ -1,4 +1,5 @@
 import './LinkList.css'
+import { Link } from 'react-router-dom'
 
 function LinkList() {
   const links = [
@@ -31,6 +32,11 @@ function LinkList() {
       id: 'book__design',
       title: 'Design Books',
       url: 'https://books.zuri.team/design-rules',
+    },
+    {
+      id: 'contact',
+      title: 'Contact me',
+      url: '/contact',
     },
   ]
   return (
