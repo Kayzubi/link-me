@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import './Contact.css'
 
 function Contact() {
@@ -16,19 +16,17 @@ function Contact() {
   const handleChange = (event) => {
     const { name, value } = event.target
     setFormValues({ ...formValues, [name]: value })
+    setFormErrors(validateForm(formValues))
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
     setFormErrors(validateForm(formValues))
-    setIsSubmit(true)
-  }
-
-  useEffect(() => {
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
+    if (Object.keys(formErrors).length === 0) {
+      setIsSubmit(true)
       setFormValues(initialValues)
     }
-  }, [formErrors, isSubmit])
+  }
 
   const validateForm = (values) => {
     const errors = {}
