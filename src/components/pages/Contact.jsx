@@ -63,7 +63,7 @@ function Contact() {
       </div>
       {isSubmit && Object.keys(formErrors).length === 0 ? (
         <div className='success-message'>
-          <p>Thank you! Your message is well recieved</p>
+          <p>Thank you for your message. I will get back to you shortlty</p>
         </div>
       ) : null}
       <form onSubmit={handleSubmit} className='form'>
