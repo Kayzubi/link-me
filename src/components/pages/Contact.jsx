@@ -16,15 +16,17 @@ function Contact() {
   const handleChange = (event) => {
     const { name, value } = event.target
     setFormValues({ ...formValues, [name]: value })
-    setFormErrors(validateForm(formValues))
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setFormErrors(validateForm(formValues))
+    validateForm(formValues)
     if (Object.keys(formErrors).length === 0) {
       setIsSubmit(true)
       setFormValues(initialValues)
+      setTimeout(() => {
+        setIsSubmit(false)
+      }, 3000)
     }
   }
 
@@ -49,7 +51,7 @@ function Contact() {
       errors.message = 'Message must be more than 10 charaters'
     }
 
-    return errors
+    setFormErrors(errors)
   }
   return (
     <div className='contact'>
@@ -59,6 +61,11 @@ function Contact() {
           Hi there, contact me to ask me about anything you have in mind.
         </p>
       </div>
+      {isSubmit && Object.keys(formErrors).length === 0 ? (
+        <div className='success-message'>
+          <p>Thank you! Your message is well recieved</p>
+        </div>
+      ) : null}
       <form onSubmit={handleSubmit} className='form'>
         <div className='row'>
           <div className='form__group'>
@@ -130,7 +137,7 @@ function Contact() {
         </div>
         <div className='form__group checkbox-wrapper'>
           <div className='checkbox'>
-            <input id='check' type='checkbox' />
+            <input id='check' type='checkbox' required />
             <label for='check'>
               <svg viewBox='0,0,50,50'>
                 <path d='M5 30 L 20 45 L 45 5'></path>
