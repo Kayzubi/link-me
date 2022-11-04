@@ -1,7 +1,58 @@
+import { useState, useEffect } from 'react'
 import './Contact.css'
 
 function Contact() {
   const name = 'Kizito'
+  const initialValues = {
+    firstname: '',
+    lastname: '',
+    email: '',
+    message: '',
+  }
+  const [formValues, setFormValues] = useState(initialValues)
+  const [formErrors, setFormErrors] = useState({})
+  const [isSubmit, setIsSubmit] = useState(false)
+
+  const handleChange = (event) => {
+    const { name, value } = event.target
+    setFormValues({ ...formValues, [name]: value })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setFormErrors(validateForm(formValues))
+    setIsSubmit(true)
+  }
+
+  useEffect(() => {
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      setFormValues(initialValues)
+    }
+  }, [formErrors, isSubmit])
+
+  const validateForm = (values) => {
+    const errors = {}
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
+
+    if (!values.firstname) {
+      errors.firstname = 'Firstname cannot be empty'
+    }
+    if (!values.lastname) {
+      errors.lastname = 'Lastname cannot be empty'
+    }
+    if (!values.email) {
+      errors.email = 'Email cannot be empty'
+    } else if (!regex.test(values.email)) {
+      errors.email = 'Enter a valid email'
+    }
+    if (!values.message) {
+      errors.message = 'Please enter a message'
+    } else if (values.message.length < 10) {
+      errors.message = 'Message must be more than 10 charaters'
+    }
+
+    return errors
+  }
   return (
     <div className='contact'>
       <div className='contact__heading'>
@@ -10,7 +61,7 @@ function Contact() {
           Hi there, contact me to ask me about anything you have in mind.
         </p>
       </div>
-      <form action='#' className='form'>
+      <form onSubmit={handleSubmit} className='form'>
         <div className='row'>
           <div className='form__group'>
             <label htmlFor='first_name' className='form__label'>
@@ -22,7 +73,10 @@ function Contact() {
               name='firstname'
               id='first_name'
               placeholder='Enter your first name'
+              value={formValues.firstname}
+              onChange={handleChange}
             />
+            <small className='error-message'>{formErrors.firstname}</small>
           </div>
           <div className='form__group'>
             <label htmlFor='last_name' className='form__label'>
@@ -34,7 +88,10 @@ function Contact() {
               name='lastname'
               id='last_name'
               placeholder='Enter your last name'
+              value={formValues.lastname}
+              onChange={handleChange}
             />
+            <small className='error-message'>{formErrors.lastname}</small>
           </div>
         </div>
         <div className='form__group'>
@@ -43,11 +100,14 @@ function Contact() {
           </label>
           <input
             className='form__input'
-            type='email'
+            type='text'
             name='email'
             id='email'
             placeholder='yourname@email.com'
+            value={formValues.email}
+            onChange={handleChange}
           />
+          <small className='error-message'>{formErrors.email}</small>
         </div>
         <div className='form__group'>
           <label htmlFor='message' className='form__label'>
@@ -59,7 +119,10 @@ function Contact() {
             id='message'
             placeholder="Send me a message and I'll reply you as soon as possible..."
             cols='30'
-            rows='10'></textarea>
+            rows='10'
+            value={formValues.message}
+            onChange={handleChange}></textarea>
+          <small className='error-message'>{formErrors.message}</small>
         </div>
         <div className='form__group checkbox-wrapper'>
           <div className='checkbox'>
