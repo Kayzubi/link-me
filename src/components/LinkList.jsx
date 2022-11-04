@@ -33,11 +33,6 @@ function LinkList() {
       title: 'Design Books',
       url: 'https://books.zuri.team/design-rules',
     },
-    {
-      id: 'contact',
-      title: 'Contact me',
-      url: '/contact',
-    },
   ]
   return (
     <div className='links'>
@@ -52,6 +47,9 @@ function LinkList() {
           </a>
         )
       })}
+      <Link id='contact' className='btn btn-link' to={'/contact'}>
+        Contact Me
+      </Link>
     </div>
   )
 }

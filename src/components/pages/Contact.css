@@ -1,0 +1,113 @@
+.contact {
+  padding-top: 3rem;
+}
+
+.contact__heading,
+.contact__heading-main {
+  margin-bottom: 1rem;
+}
+
+.contact__heading-sub {
+  color: #475467;
+}
+
+.form__label {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-weight: 600;
+}
+
+.form__group {
+  margin: 2rem 1rem 1rem 0;
+}
+
+.form__input {
+  display: block;
+  font-family: inherit;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid #d0d5dd;
+  resize: none;
+}
+
+.form__input:focus {
+  border: 1px solid #d0d5dd;
+}
+
+.row {
+  margin-top: 3rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.row > * {
+  flex: auto;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.btn__submit {
+  width: 100%;
+  background-color: #1570ef;
+  padding: 2rem;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn__submit:hover {
+  background-color: #175cd3;
+}
+
+input#check {
+  position: absolute;
+  opacity: 0;
+}
+input#check:checked + label svg path {
+  stroke-dashoffset: 0;
+}
+input#check:focus + label {
+  transform: scale(1.03);
+}
+#check + label {
+  display: block;
+  border: 1px solid #1570ef;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+#check + label:active {
+  transform: scale(1.05);
+  border-radius: 4px;
+}
+#check + label svg {
+  pointer-events: none;
+}
+#check + label svg path {
+  fill: none;
+  stroke: #1570ef;
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 101;
+  transition: all 350ms cubic-bezier(1, 0, 0.37, 0.91);
+}
+
+@media only screen and (max-width: 768px) {
+  .row {
+    gap: 0;
+  }
+}

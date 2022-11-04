@@ -36,3 +36,11 @@ img {
   padding: 0 1.5rem;
   box-sizing: border-box;
 }
+
+.btn:hover {
+  transform: translateY(-4px);
+}
+
+.btn:active {
+  transform: translateY(-2px);
+}
