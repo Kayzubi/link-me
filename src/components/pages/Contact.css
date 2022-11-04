@@ -72,6 +72,14 @@
   background-color: #175cd3;
 }
 
+.success-message {
+  text-align: center;
+  background-color: rgba(0, 255, 0, 0.2);
+  padding: 5rem;
+  border-radius: 4px;
+  color: green;
+}
+
 input#check {
   position: absolute;
   opacity: 0;
