@@ -31,6 +31,9 @@
   border: 1px solid #d0d5dd;
   resize: none;
 }
+.form__input.invalid {
+  border: 1px solid #f83f23;
+}
 
 .form__input:focus {
   border: 1px solid #d0d5dd;
@@ -104,6 +107,11 @@ input#check:focus + label {
   stroke-dasharray: 100;
   stroke-dashoffset: 101;
   transition: all 350ms cubic-bezier(1, 0, 0.37, 0.91);
+}
+
+.error-message {
+  font-size: 1.2rem;
+  color: #f83f23;
 }
 
 @media only screen and (max-width: 768px) {

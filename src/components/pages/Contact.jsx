@@ -68,7 +68,9 @@ function Contact() {
               Firstname:
             </label>
             <input
-              className='form__input'
+              className={
+                formErrors.firstname ? 'form__input invalid' : 'form__input'
+              }
               type='text'
               name='firstname'
               id='first_name'
@@ -83,7 +85,9 @@ function Contact() {
               Lastname:
             </label>
             <input
-              className='form__input'
+              className={
+                formErrors.lastname ? 'form__input invalid' : 'form__input'
+              }
               type='text'
               name='lastname'
               id='last_name'
@@ -99,7 +103,7 @@ function Contact() {
             Email:
           </label>
           <input
-            className='form__input'
+            className={formErrors.email ? 'form__input invalid' : 'form__input'}
             type='text'
             name='email'
             id='email'
@@ -114,7 +118,9 @@ function Contact() {
             Message:
           </label>
           <textarea
-            className='form__input'
+            className={
+              formErrors.message ? 'form__input invalid' : 'form__input'
+            }
             name='message'
             id='message'
             placeholder="Send me a message and I'll reply you as soon as possible..."
