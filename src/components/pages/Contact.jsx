@@ -22,7 +22,6 @@ function Contact() {
               name='firstname'
               id='first_name'
               placeholder='Enter your first name'
-              required
             />
           </div>
           <div className='form__group'>
@@ -35,7 +34,6 @@ function Contact() {
               name='lastname'
               id='last_name'
               placeholder='Enter your last name'
-              required
             />
           </div>
         </div>
@@ -49,7 +47,6 @@ function Contact() {
             name='email'
             id='email'
             placeholder='yourname@email.com'
-            required
           />
         </div>
         <div className='form__group'>
@@ -62,8 +59,7 @@ function Contact() {
             id='message'
             placeholder="Send me a message and I'll reply you as soon as possible..."
             cols='30'
-            rows='10'
-            required></textarea>
+            rows='10'></textarea>
         </div>
         <div className='form__group checkbox-wrapper'>
           <div className='checkbox'>
