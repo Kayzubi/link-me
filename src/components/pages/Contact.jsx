@@ -116,7 +116,12 @@ function Contact() {
             value={formValues.email}
             onChange={handleChange}
           />
-          <small className='error-message'>{formErrors.email}</small>
+          <small
+            className={formErrors.email ? 'error-message' : 'hint-message'}>
+            {formErrors.email
+              ? formErrors.email
+              : 'Email should must contain "@"'}
+          </small>
         </div>
         <div className='form__group'>
           <label htmlFor='message' className='form__label'>
@@ -133,7 +138,12 @@ function Contact() {
             rows='10'
             value={formValues.message}
             onChange={handleChange}></textarea>
-          <small className='error-message'>{formErrors.message}</small>
+          <small
+            className={formErrors.message ? 'error-message' : 'hint-message'}>
+            {formErrors.message
+              ? formErrors.message
+              : 'Enter a message of at least 10 characters'}
+          </small>
         </div>
         <div className='form__group checkbox-wrapper'>
           <div className='checkbox'>
