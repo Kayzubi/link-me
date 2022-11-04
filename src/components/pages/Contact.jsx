@@ -109,7 +109,7 @@ function Contact() {
           </label>
           <input
             className={formErrors.email ? 'form__input invalid' : 'form__input'}
-            type='text'
+            type='email'
             name='email'
             id='email'
             placeholder='yourname@email.com'
