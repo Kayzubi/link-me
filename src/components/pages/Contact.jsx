@@ -118,9 +118,7 @@ function Contact() {
           />
           <small
             className={formErrors.email ? 'error-message' : 'hint-message'}>
-            {formErrors.email
-              ? formErrors.email
-              : 'Email should must contain "@"'}
+            {formErrors.email ? formErrors.email : 'Email must contain "@"'}
           </small>
         </div>
         <div className='form__group'>
