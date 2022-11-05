@@ -38,8 +38,14 @@
   border: 1px solid #f83f23;
 }
 
+.form__input.invalid:focus {
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #ffd3cc;
+}
+
 .form__input:focus {
   border: 1px solid #d0d5dd;
+  outline: none;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #d1e9ff;
 }
 
 .row {
@@ -109,7 +115,9 @@ input#check:focus + label {
 #check + label:active {
   transform: scale(1.05);
   border-radius: 4px;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #d1e9ff;
 }
+
 #check + label svg {
   pointer-events: none;
 }
